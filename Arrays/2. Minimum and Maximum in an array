@@ -1,0 +1,23 @@
+// Java program to find minimum and maximum number in an array..
+
+//User function Template for Java
+
+class Solution
+{ 
+    public static int findSum(int arr[],int N) 
+    {
+        //code here
+      int min =arr[0];
+      int max =arr[0];
+        
+        for(int i=0;i<N;i++){
+            if(arr[i]>max){
+                max =arr[i];
+            }
+            
+            if(arr[i]<min)
+            min =arr[i];
+        }
+        return max+min;
+    }
+}
