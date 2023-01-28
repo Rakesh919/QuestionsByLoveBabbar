@@ -1,0 +1,33 @@
+
+class Solution {
+    
+    public void segregateElements(int arr[], int n)
+    {
+        // Your code goes here
+        
+        // 😎😎 First we store negative elements to the copy array..
+       int e=n-1;
+       int ar[] =new int[n];
+       for(int i=n-1;i>=0;i--){
+           if(arr[i]<0){
+               ar[e]=arr[i];
+               e--;
+           }
+       }
+       
+       // Then we store positive elements to the copy array ..
+       int s=0;
+       for(int i=0;i<n;i++){
+           if(arr[i]>0){
+              ar[s]=arr[i];
+              s++;
+           }
+       }
+       
+       // At last we copy the elements to the original array..
+       for(int i=0;i<n;i++){
+           arr[i] =ar[i];
+       }
+        
+    }
+}
